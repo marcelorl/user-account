@@ -1,0 +1,21 @@
+{
+  "name": "user-account",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start:client && npm run start:api",
+    "start:client": "cd client/ && npm start",
+    "start:api": "cd api/ && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelorl/user-account.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcelorl/user-account/issues"
+  },
+  "homepage": "https://github.com/marcelorl/user-account#readme"
+}
