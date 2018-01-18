@@ -1,0 +1,80 @@
+{
+  "name": "user-account",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prestart": "yarn",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
+    "coverage": "npm test -- --coverage",
+    "eject": "react-scripts eject",
+    "lint": "semistandard \"src/**/*.js\" --fix --verbose | snazzy",
+    "cosmos": "cosmos"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "history": "^4.7.2",
+    "lodash.get": "^4.4.2",
+    "material-ui": "^0.20.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "1.1.0",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
+    "faker": "^4.1.0",
+    "jest-enzyme": "^4.0.2",
+    "react-cosmos": "^3.2.1",
+    "react-cosmos-router-proxy": "^3.1.1",
+    "react-cosmos-test": "^3.2.1",
+    "react-test-renderer": "^16.2.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-mock-store": "^1.4.0",
+    "rosie": "^1.6.0",
+    "semistandard": "^12.0.0",
+    "snazzy": "^7.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js}",
+      "!<rootDir>/node_modules/",
+      "!src/*.{js}",
+      "!src/cosmos.proxies.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  },
+  "semistandard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "jest",
+      "describe",
+      "it",
+      "xit",
+      "expect",
+      "FormData",
+      "alert",
+      "localStorage",
+      "beforeEach"
+    ]
+  }
+}
