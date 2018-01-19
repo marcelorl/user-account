@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
@@ -13,19 +14,37 @@ class App extends Component {
   render () {
     return (
       <MuiThemeProvider>
-        <AppBar title="User Account" showMenuIconButton={false} style={{ 'padding-left': '274px' }} />
-        <Drawer open>
-          <MenuItem>User profile</MenuItem>
-          <Divider light />
-          <MenuItem>Address list</MenuItem>
-          <Divider />
-          <MenuItem>Order history</MenuItem>
-          <Divider />
-          <MenuItem>Wishlist</MenuItem>
-          <Divider />
-        </Drawer>
-        <div className="content">
-          {this.props.children}
+        <div>
+          <AppBar title="User Account" showMenuIconButton={false} style={{ 'paddingLeft': '274px' }} />
+          <Drawer open>
+            <MenuItem>
+              <Link to="/">
+                User profile
+              </Link>
+            </MenuItem>
+            <Divider />
+            <MenuItem>
+              <Link to="/order">
+                Address list
+              </Link>
+            </MenuItem>
+            <Divider />
+            <MenuItem>
+              <Link to="/order">
+                Order history
+              </Link>
+            </MenuItem>
+            <Divider />
+            <MenuItem>
+              <Link to="/order">
+                Wishlist
+              </Link>
+            </MenuItem>
+            <Divider />
+          </Drawer>
+          <div className="content">
+            {this.props.children}
+          </div>
         </div>
       </MuiThemeProvider>
     );

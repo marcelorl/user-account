@@ -1,13 +1,18 @@
 {
   "order": [
-    { "name": "product 1", "description": "description 1", "image": "./test.jpg" },
-    { "name": "product 2", "description": "description 2", "image": "./test.jpg" },
-    { "name": "product 3", "description": "description 3", "image": "./test.jpg" },
-    { "name": "product 4", "description": "description 4", "image": "./test.jpg" },
-    { "name": "product 5", "description": "description 5", "image": "./test.jpg" }
+    { "name": "product 1", "description": "description 1", "image": "./test.jpg", "purchaseDate": "30/12/2017" },
+    { "name": "product 2", "description": "description 2", "image": "./test.jpg", "purchaseDate": "30/12/2017" },
+    { "name": "product 3", "description": "description 3", "image": "./test.jpg", "purchaseDate": "30/12/2017" },
+    { "name": "product 4", "description": "description 4", "image": "./test.jpg", "purchaseDate": "30/12/2017" },
+    { "name": "product 5", "description": "description 5", "image": "./test.jpg", "purchaseDate": "30/12/2017" }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+  "wishlist": [
+    { "name": "product 1", "image": "./test.jpg" },
+    { "name": "product 2", "image": "./test.jpg" },
+    { "name": "product 3", "image": "./test.jpg" },
+    { "name": "product 4", "image": "./test.jpg" },
+    { "name": "product 5", "image": "./test.jpg" }
   ],
-  "profile": { "name": "typicode" }
+  "user": { "name": "test", "email": "test@test.com", "age": 20 },
+  "address": { "name": "typicode" }
 }

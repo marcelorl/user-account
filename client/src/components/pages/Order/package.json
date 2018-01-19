@@ -1,0 +1,5 @@
+{
+  "main": "./Order.container.js",
+  "name": "Order Container",
+  "private": true
+}

@@ -6,13 +6,15 @@ import { routerReducer, routerMiddleware } from 'react-router-redux';
 
 import history from '../services/History';
 import userReducer from './user';
+import orderReducer from './order';
 
 const loggerMiddleware = createLogger();
 const routerHistoryMiddleware = routerMiddleware(history);
 
 const reducers = combineReducers({
   routing: routerReducer,
-  user: userReducer
+  user: userReducer,
+  order: orderReducer
 });
 
 const middlewares = applyMiddleware(
