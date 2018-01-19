@@ -1,6 +1,10 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "order": [
+    { "name": "product 1", "description": "description 1", "image": "./test.jpg" },
+    { "name": "product 2", "description": "description 2", "image": "./test.jpg" },
+    { "name": "product 3", "description": "description 3", "image": "./test.jpg" },
+    { "name": "product 4", "description": "description 4", "image": "./test.jpg" },
+    { "name": "product 5", "description": "description 5", "image": "./test.jpg" }
   ],
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }

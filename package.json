@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:client && npm run start:api",
+    "start": "concurrently \"npm run start:api\" \"npm run start:client\"",
     "start:client": "cd client/ && npm start",
     "start:api": "cd api/ && npm start"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/marcelorl/user-account#readme",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "react-router-redux": "^5.0.0-alpha.9"
   }
 }
