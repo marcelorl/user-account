@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json"
+    "start": "json-server --watch --port 1337 db.json"
   },
   "author": "",
   "license": "ISC",

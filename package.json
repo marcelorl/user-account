@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/marcelorl/user-account/issues"
   },
-  "homepage": "https://github.com/marcelorl/user-account#readme"
+  "homepage": "https://github.com/marcelorl/user-account#readme",
+  "dependencies": {
+    "react-router-redux": "^5.0.0-alpha.9"
+  }
 }
