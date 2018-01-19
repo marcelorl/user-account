@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prestart": "yarn && cd client/ && yarn && cd ../api/ && yarn",
     "start": "concurrently \"npm run start:api\" \"npm run start:client\"",
     "start:client": "cd client/ && npm start",
     "start:api": "cd api/ && npm start"
