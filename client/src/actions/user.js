@@ -1,23 +1,35 @@
-export const USER_LOGIN = 'USER_LOGIN';
-export const USER_LOGOUT = 'USER_LOGOUT';
+import axios from '../services/Request';
 
-export const requestLogin = user =>
+export const USER_FAIL_FETCH = 'USER_FAIL_FETCH';
+export const USER_REQUEST_FETCH = 'USER_REQUEST_FETCH';
+export const USER_SUCCESS_FETCH = 'USER_SUCCESS_FETCH';
+
+const dependencies = { axios };
+
+export const requestUserFail = err =>
   ({
-    type: USER_LOGIN,
+    type: USER_FAIL_FETCH,
+    err
+  });
+
+export const requestUser = () =>
+  ({
+    type: USER_REQUEST_FETCH
+  });
+
+export const requestUserSuccess = user =>
+  ({
+    type: USER_SUCCESS_FETCH,
     user
   });
 
-export const requestLogout = () =>
-  ({
-    type: USER_LOGOUT
-  });
+export const fetchUser = injection => {
+  const { axios } = Object.assign({}, dependencies, injection);
 
-export const login = user =>
-  dispatch => {
-    dispatch(requestLogin(user));
+  return dispatch => {
+    dispatch(requestUser());
+    return axios.get('/user')
+      .then(({ data }) => dispatch(requestUserSuccess(data)))
+      .catch(err => dispatch(requestUserFail(err)));
   };
-
-export const logout = () =>
-  dispatch => {
-    dispatch(requestLogout());
-  };
+};

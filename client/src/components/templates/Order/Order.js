@@ -23,8 +23,8 @@ const Order = ({ order }) =>
       </TableHeader>
       <TableBody displayRowCheckbox={false}>
         {order.list.map((item, index) =>
-          <TableRow index={index}>
-            <TableRowColumn><img src={`http://localhost:3000/${item.image}`} width="100px" /></TableRowColumn>
+          <TableRow key={index}>
+            <TableRowColumn><img src={`http://localhost:3000/${item.image}`} width="100px" alt="test" /></TableRowColumn>
             <TableRowColumn>{item.name}</TableRowColumn>
             <TableRowColumn>{item.description}</TableRowColumn>
             <TableRowColumn>{item.purchaseDate}</TableRowColumn>
@@ -35,7 +35,7 @@ const Order = ({ order }) =>
   </div>;
 
 Order.propTypes = {
-  order: PropTypes.array,
+  order: PropTypes.object,
 };
 
 export default Order;

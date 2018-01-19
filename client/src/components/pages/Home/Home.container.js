@@ -1,24 +1,17 @@
 import React, { Component } from 'react';
+import get from 'lodash.get';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import { fetchUser } from '../../../actions/user';
 
 import HomeTemplate from '../../templates/Home';
 
 class Home extends Component {
-  constructor () {
-    super();
+  async componentDidMount () {
+    const { fetchUser } = this.props;
 
-    this.onChange = this.onChange.bind(this);
-
-    this.state = {
-      user: {}
-    }
-  }
-
-  onChange (el) {
-    const user = Object.assign({}, this.state.user, { [el.target.name]: el.target.value });
-
-    this.setState({
-      user
-    });
+    await fetchUser();
   }
 
   onSubmit () {
@@ -27,9 +20,18 @@ class Home extends Component {
 
   render () {
     return (
-      <HomeTemplate {...this.state} {...this.props} />
+      <HomeTemplate {...this.props} />
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state =>
+  (Object.assign({
+    user: get(state, 'user', {})
+  }));
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  fetchUser
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -25,7 +25,6 @@ const orderReducer = (state = INITIAL_STATE, action) => {
         list: []
       });
     case ORDER_SUCCESS_FETCH:
-      console.log(action)
       return Object.assign({}, state, {
         error: '',
         loading: false,
