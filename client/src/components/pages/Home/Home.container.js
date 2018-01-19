@@ -3,7 +3,7 @@ import get from 'lodash.get';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { fetchUser } from '../../../actions/user';
+import { fetchUser, updateUser } from '../../../actions/user';
 
 import HomeTemplate from '../../templates/Home';
 
@@ -12,10 +12,6 @@ class Home extends Component {
     const { fetchUser } = this.props;
 
     await fetchUser();
-  }
-
-  onSubmit () {
-
   }
 
   render () {
@@ -31,7 +27,8 @@ const mapStateToProps = state =>
   }));
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  fetchUser
+  fetchUser,
+  updateUser
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

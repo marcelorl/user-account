@@ -1,18 +1,74 @@
 {
   "order": [
-    { "name": "product 1", "description": "description 1", "image": "./test.jpg", "purchaseDate": "30/12/2017" },
-    { "name": "product 2", "description": "description 2", "image": "./test.jpg", "purchaseDate": "30/12/2017" },
-    { "name": "product 3", "description": "description 3", "image": "./test.jpg", "purchaseDate": "30/12/2017" },
-    { "name": "product 4", "description": "description 4", "image": "./test.jpg", "purchaseDate": "30/12/2017" },
-    { "name": "product 5", "description": "description 5", "image": "./test.jpg", "purchaseDate": "30/12/2017" }
+    {
+      "name": "product 1",
+      "description": "description 1",
+      "image": "./test.jpg",
+      "purchaseDate": "30/12/2017"
+    },
+    {
+      "name": "product 2",
+      "description": "description 2",
+      "image": "./test.jpg",
+      "purchaseDate": "30/12/2017"
+    },
+    {
+      "name": "product 3",
+      "description": "description 3",
+      "image": "./test.jpg",
+      "purchaseDate": "30/12/2017"
+    },
+    {
+      "name": "product 4",
+      "description": "description 4",
+      "image": "./test.jpg",
+      "purchaseDate": "30/12/2017"
+    },
+    {
+      "name": "product 5",
+      "description": "description 5",
+      "image": "./test.jpg",
+      "purchaseDate": "30/12/2017"
+    }
   ],
   "wishlist": [
-    { "name": "product 1", "image": "./test.jpg", "dateAdded": "30/12/2017", "price": 15.55 },
-    { "name": "product 2", "image": "./test.jpg", "dateAdded": "30/12/2017", "price": 150.09 },
-    { "name": "product 3", "image": "./test.jpg", "dateAdded": "30/12/2017", "price": 200.34 },
-    { "name": "product 4", "image": "./test.jpg", "dateAdded": "30/12/2017", "price": 100.00 },
-    { "name": "product 5", "image": "./test.jpg", "dateAdded": "30/12/2017", "price": 1.10 }
+    {
+      "name": "product 1",
+      "image": "./test.jpg",
+      "dateAdded": "30/12/2017",
+      "price": 15.55
+    },
+    {
+      "name": "product 2",
+      "image": "./test.jpg",
+      "dateAdded": "30/12/2017",
+      "price": 150.09
+    },
+    {
+      "name": "product 3",
+      "image": "./test.jpg",
+      "dateAdded": "30/12/2017",
+      "price": 200.34
+    },
+    {
+      "name": "product 4",
+      "image": "./test.jpg",
+      "dateAdded": "30/12/2017",
+      "price": 100
+    },
+    {
+      "name": "product 5",
+      "image": "./test.jpg",
+      "dateAdded": "30/12/2017",
+      "price": 1.1
+    }
   ],
-  "user": { "name": "test", "email": "test@test.com", "age": 20 },
-  "address": { "name": "typicode" }
+  "user": {
+    "name": "test name changed",
+    "email": "test@test.com",
+    "age": 20
+  },
+  "address": {
+    "name": "typicode"
+  }
 }

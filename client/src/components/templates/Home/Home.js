@@ -12,35 +12,41 @@ class Home extends Component {
     };
 
     this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentWillReceiveProps (nextProps) {
     this.setState({
-      user: nextProps.user
+      user: nextProps.user.data
     });
   }
 
   onChange (el) {
 
-    const user = Object.assign({}, this.state.user, { data: { [el.target.name]: el.target.value } });
+    const user = Object.assign({}, this.state.user, { [el.target.name]: el.target.value });
 
     this.setState({
       user
     });
   }
 
+  onSubmit (el) {
+    el.preventDefault();
+
+    this.props.updateUser(this.state.user);
+  }
+
   render() {
-    const { onSubmit } = this.props;
-    const { data } = this.state.user;
+    const { user } = this.state;
 
     return (
-      <form onSubmit={onSubmit}>
+      <form onSubmit={this.onSubmit}>
         <h1>User Profile</h1>
         <TextField
           className="form__input__name"
           placeholder="Name"
           name="name"
-          value={data.name}
+          value={user.name}
           onChange={this.onChange}
         /><br />
         <TextField
@@ -48,14 +54,14 @@ class Home extends Component {
           placeholder="E-mail"
           name="email"
           type="email"
-          value={data.email}
+          value={user.email}
           onChange={this.onChange}
         /><br />
         <TextField
           className="form__input__age"
           placeholder="Age"
           name="age"
-          value={data.age}
+          value={user.age}
           type="number"
           onChange={this.onChange}
         /><br /><br />
