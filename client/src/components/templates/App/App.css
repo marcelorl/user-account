@@ -10,6 +10,14 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+}
+
 .navbar {
   padding-left: 274px;
 }
