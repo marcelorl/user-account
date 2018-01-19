@@ -1,0 +1,20 @@
+* {
+  font-family: Roboto, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  padding-left: 274px;
+}
+
+.content {
+  padding-left: 274px;
+  padding-top: 10px
+}

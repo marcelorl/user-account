@@ -1,0 +1,5 @@
+{
+  "main": "./Home.container.js",
+  "name": "Home Container",
+  "private": true
+}
