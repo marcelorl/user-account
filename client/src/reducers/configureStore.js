@@ -8,6 +8,7 @@ import history from '../services/History';
 import userReducer from './user';
 import orderReducer from './order';
 import wishlistReducer from './wishlist';
+import addressReducer from './address';
 
 const loggerMiddleware = createLogger();
 const routerHistoryMiddleware = routerMiddleware(history);
@@ -16,7 +17,8 @@ const reducers = combineReducers({
   routing: routerReducer,
   user: userReducer,
   order: orderReducer,
-  wishlist: wishlistReducer
+  wishlist: wishlistReducer,
+  address: addressReducer
 });
 
 const middlewares = applyMiddleware(

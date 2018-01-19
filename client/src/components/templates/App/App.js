@@ -24,7 +24,7 @@ class App extends Component {
             </MenuItem>
             <Divider />
             <MenuItem>
-              <Link to="/order">
+              <Link to="/address">
                 Address list
               </Link>
             </MenuItem>

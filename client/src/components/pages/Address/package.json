@@ -1,0 +1,5 @@
+{
+  "main": "./Address.container.js",
+  "name": "Address Container",
+  "private": true
+}

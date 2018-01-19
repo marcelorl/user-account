@@ -74,6 +74,14 @@
     "age": 20
   },
   "address": {
-    "name": "typicode"
+    "list": [
+      {
+        "street": "elm street",
+        "number": "1428",
+        "neighborhood": "neighborhood",
+        "country": "usa",
+        "city": "some city"
+      }
+    ]
   }
 }
