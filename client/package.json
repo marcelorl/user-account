@@ -24,11 +24,12 @@
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-router-redux": "^4.0.8",
+    "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "1.1.0",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "typeface-roboto": "^0.0.50"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -38,6 +39,7 @@
     "faker": "^4.1.0",
     "jest-enzyme": "^4.0.2",
     "react-cosmos": "^3.2.1",
+    "react-cosmos-redux-proxy": "^3.1.1",
     "react-cosmos-router-proxy": "^3.1.1",
     "react-cosmos-test": "^3.2.1",
     "react-test-renderer": "^16.2.0",

@@ -6123,6 +6123,15 @@ react-cosmos-playground@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/react-cosmos-playground/-/react-cosmos-playground-3.2.1.tgz#b27a6bdd93529d3a3403ad7879b61d1d9d5e30b8"
 
+react-cosmos-redux-proxy@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/react-cosmos-redux-proxy/-/react-cosmos-redux-proxy-3.1.1.tgz#744db9935a9c91c66fadc31f518b7b5df56ed1a1"
+  dependencies:
+    lodash.omit "^4.5.0"
+    prop-types "^15.5.10"
+    react-cosmos-shared "^3.1.1"
+    redux "^3.7.2"
+
 react-cosmos-router-proxy@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/react-cosmos-router-proxy/-/react-cosmos-router-proxy-3.1.1.tgz#89f3c6977b359c6076f327e87b534595704472f2"
@@ -6305,9 +6314,13 @@ react-router-dom@^4.2.2:
     react-router "^4.2.0"
     warning "^3.0.0"
 
-react-router-redux@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.8.tgz#227403596b5151e182377dab835b5d45f0f8054e"
+react-router-redux@^5.0.0-alpha.9:
+  version "5.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-5.0.0-alpha.9.tgz#825431516e0e6f1fd93b8807f6bd595e23ec3d10"
+  dependencies:
+    history "^4.7.2"
+    prop-types "^15.6.0"
+    react-router "^4.2.0"
 
 react-router@^4.2.0:
   version "4.2.0"
@@ -7553,6 +7566,10 @@ type-is@~1.6.15:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
+
+typeface-roboto@^0.0.50:
+  version "0.0.50"
+  resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-0.0.50.tgz#cc8e2ad00a24a4d0efce60731ccf722c29185fa4"
 
 ua-parser-js@^0.7.9:
   version "0.7.17"
