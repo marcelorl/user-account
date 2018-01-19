@@ -17,6 +17,7 @@
     "axios": "^0.17.1",
     "history": "^4.7.2",
     "lodash.get": "^4.4.2",
+    "material-icons": "^0.1.0",
     "material-ui": "^0.20.0",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",

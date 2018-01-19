@@ -33,30 +33,35 @@
   ],
   "wishlist": [
     {
+      "id": 1,
       "name": "product 1",
       "image": "./test.jpg",
       "dateAdded": "30/12/2017",
       "price": 15.55
     },
     {
+      "id": 2,
       "name": "product 2",
       "image": "./test.jpg",
       "dateAdded": "30/12/2017",
       "price": 150.09
     },
     {
+      "id": 3,
       "name": "product 3",
       "image": "./test.jpg",
       "dateAdded": "30/12/2017",
       "price": 200.34
     },
     {
+      "id": 4,
       "name": "product 4",
       "image": "./test.jpg",
       "dateAdded": "30/12/2017",
       "price": 100
     },
     {
+      "id": 5,
       "name": "product 5",
       "image": "./test.jpg",
       "dateAdded": "30/12/2017",

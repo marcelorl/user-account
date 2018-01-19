@@ -3,19 +3,31 @@ import get from 'lodash.get';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { fetchWishlist } from '../../../actions/wishlist';
+import { deleteProduct, fetchWishlist } from '../../../actions/wishlist';
 import WishlistTemplate from '../../templates/Wishlist';
 
 class Wishlist extends Component {
+  constructor () {
+    super();
+
+    this.deleteProduct = this.deleteProduct.bind(this);
+  }
+
   async componentDidMount () {
     const { fetchWishlist } = this.props;
 
     await fetchWishlist();
   }
 
+  async deleteProduct (id) {
+    await this.props.deleteProduct(id);
+
+    await this.props.fetchWishlist();
+  }
+
   render () {
     return (
-      <WishlistTemplate {...this.props} />
+      <WishlistTemplate wishlist={this.props.wishlist} deleteProduct={this.deleteProduct} />
     );
   }
 }
@@ -26,6 +38,7 @@ const mapStateToProps = state =>
   }));
 
 const mapDispatchToProps = dispatch => bindActionCreators({
+  deleteProduct,
   fetchWishlist
 }, dispatch);
 
