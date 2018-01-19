@@ -36,7 +36,7 @@ class App extends Component {
             </MenuItem>
             <Divider />
             <MenuItem>
-              <Link to="/order">
+              <Link to="/wishlist">
                 Wishlist
               </Link>
             </MenuItem>

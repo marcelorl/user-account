@@ -7,8 +7,6 @@ class Home extends Component {
   constructor (props) {
     super(props);
 
-    console.log(this.props)
-
     this.state = {
       user: { data: {} }
     };
@@ -17,13 +15,14 @@ class Home extends Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    this.state = {
+    this.setState({
       user: nextProps.user
-    };
+    });
   }
 
   onChange (el) {
-    const user = Object.assign({}, this.state.user, { [el.target.name]: el.target.value });
+
+    const user = Object.assign({}, this.state.user, { data: { [el.target.name]: el.target.value } });
 
     this.setState({
       user
@@ -31,7 +30,7 @@ class Home extends Component {
   }
 
   render() {
-    const { onChange, onSubmit } = this.props;
+    const { onSubmit } = this.props;
     const { data } = this.state.user;
 
     return (
@@ -42,7 +41,7 @@ class Home extends Component {
           placeholder="Name"
           name="name"
           value={data.name}
-          onChange={onChange}
+          onChange={this.onChange}
         /><br />
         <TextField
           className="form__input__email"
@@ -50,7 +49,7 @@ class Home extends Component {
           name="email"
           type="email"
           value={data.email}
-          onChange={onChange}
+          onChange={this.onChange}
         /><br />
         <TextField
           className="form__input__age"
@@ -58,7 +57,7 @@ class Home extends Component {
           name="age"
           value={data.age}
           type="number"
-          onChange={onChange}
+          onChange={this.onChange}
         /><br /><br />
 
         <RaisedButton className="form__btn-update" type="submit" label="Update" secondary={true}/>

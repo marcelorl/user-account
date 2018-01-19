@@ -6,6 +6,7 @@ import createHistory from 'history/createBrowserHistory';
 import App from './components/pages/App';
 import Home from './components/pages/Home';
 import Order from './components/pages/Order';
+import Wishlist from './components/pages/Wishlist';
 
 const history = createHistory();
 
@@ -22,5 +23,6 @@ export const makeMainRoutes = () =>
     <div>
       <AppRoute exact path='/' component={Home} />
       <AppRoute exact path='/order' component={Order} />
+      <AppRoute exact path='/wishlist' component={Wishlist} />
     </div>
   </ConnectedRouter>;

@@ -7,6 +7,7 @@ import { routerReducer, routerMiddleware } from 'react-router-redux';
 import history from '../services/History';
 import userReducer from './user';
 import orderReducer from './order';
+import wishlistReducer from './wishlist';
 
 const loggerMiddleware = createLogger();
 const routerHistoryMiddleware = routerMiddleware(history);
@@ -14,7 +15,8 @@ const routerHistoryMiddleware = routerMiddleware(history);
 const reducers = combineReducers({
   routing: routerReducer,
   user: userReducer,
-  order: orderReducer
+  order: orderReducer,
+  wishlist: wishlistReducer
 });
 
 const middlewares = applyMiddleware(
