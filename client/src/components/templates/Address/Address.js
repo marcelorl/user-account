@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import Divider from 'material-ui/Divider';
+import { Card } from 'material-ui/Card';
+
+import './Address.css';
 
 class Address extends Component {
   constructor (props) {
@@ -32,12 +34,16 @@ class Address extends Component {
     })
   }
 
-  onChange (el) {
-    const address = Object.assign({}, this.state.address, { [el.target.name]: el.target.value });
+  onChange (index) {
+    return el => {
+      const address = this.state.address;
+      address[index][el.target.name] = el.target.value;
 
-    this.setState({
-      address
-    });
+      console.log('address template -->', address)
+      this.setState({
+        address
+      });
+    }
   }
 
   onSubmit (el) {
@@ -53,38 +59,45 @@ class Address extends Component {
       <form onSubmit={this.onSubmit}>
         <h1>User's Address list</h1>
         {address.map((item, index) =>
-          <div key={index}>
+          <Card key={index} className="address-list__item">
             <TextField
+              fullWidth
+              required
               className="form__input__street"
               placeholder="Street"
               name="street"
               value={item.street}
-              onChange={this.onChange}
+              onChange={this.onChange(index)}
             /><br/>
             <TextField
+              fullWidth
+              required
               className="form__input__number"
               placeholder="Number"
               name="number"
               value={item.number}
-              onChange={this.onChange}
+              onChange={this.onChange(index)}
             /><br/>
             <TextField
+              fullWidth
+              required
               className="form__input__city"
               placeholder="City"
               name="city"
               value={item.city}
-              onChange={this.onChange}
+              onChange={this.onChange(index)}
             /><br/>
             <TextField
+              fullWidth
+              required
               className="form__input__country"
               placeholder="Country"
               name="country"
               value={item.country}
-              onChange={this.onChange}
+              onChange={this.onChange(index)}
             /><br/>
-            <Divider />
             <br/>
-          </div>
+          </Card>
         )}
         <div>
           <RaisedButton onClick={this.onAddAddress} className="form__btn-update" type="button" label="+" primary={true}/>

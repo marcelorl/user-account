@@ -15,7 +15,6 @@ class Address extends Component {
   }
 
   render () {
-    console.log('this.props--->', this.props)
     return (
       <AddressTemplate {...this.props} />
     );

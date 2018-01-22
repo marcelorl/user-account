@@ -43,6 +43,7 @@ class Home extends Component {
       <form onSubmit={this.onSubmit}>
         <h1>User Profile</h1>
         <TextField
+          fullWidth
           className="form__input__name"
           placeholder="Name"
           name="name"
@@ -50,6 +51,7 @@ class Home extends Component {
           onChange={this.onChange}
         /><br />
         <TextField
+          fullWidth
           className="form__input__email"
           placeholder="E-mail"
           name="email"
@@ -58,6 +60,7 @@ class Home extends Component {
           onChange={this.onChange}
         /><br />
         <TextField
+          fullWidth
           className="form__input__age"
           placeholder="Age"
           name="age"
