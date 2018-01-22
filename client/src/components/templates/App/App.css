@@ -23,8 +23,12 @@ a:visited {
 }
 
 .content {
-  padding-left: 274px;
-  padding-top: 10px
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.content.is-marged {
+  margin-left: 274px;
 }
 
 .sidebar__item {

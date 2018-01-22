@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "bem-classnames": "^1.0.7",
     "history": "^4.7.2",
     "lodash.get": "^4.4.2",
     "material-icons": "^0.1.0",

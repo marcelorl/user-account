@@ -4,19 +4,47 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import cx from 'bem-classnames';
 
 import 'typeface-roboto';
 
 import './App.css';
 
+let classes = {
+  name: 'content',
+  states: ['marged']
+};
+
 class App extends Component {
+  constructor () {
+    super();
+
+    this.state = {
+      showMenu: true
+    };
+
+    this.onClickLeftButton = this.onClickLeftButton.bind(this);
+  }
+
+  onClickLeftButton () {
+    const showMenu = this.state.showMenu;
+
+    this.setState({
+      showMenu: !showMenu
+    });
+  }
+
+  renderAppBar () {
+    return <AppBar title="User Account" onLeftIconButtonClick={this.onClickLeftButton} />;
+  }
+
   render () {
     return (
       <MuiThemeProvider>
         <div>
-          <AppBar showMenuIconButton={false} />
-          <Drawer open>
-            <AppBar title="User Account" showMenuIconButton={false} />
+          {this.renderAppBar()}
+          <Drawer open={this.state.showMenu}>
+            {this.renderAppBar()}
             <MenuItem>
               <Link className="sidebar__item" to="/">
                 User profile
@@ -38,7 +66,7 @@ class App extends Component {
               </Link>
             </MenuItem>
           </Drawer>
-          <div className="content">
+          <div className={cx(classes, { marged: this.state.showMenu })}>
             {this.props.children}
           </div>
         </div>
