@@ -26,3 +26,9 @@ a:visited {
   padding-left: 274px;
   padding-top: 10px
 }
+
+.sidebar__item {
+  display: block;
+  height: 100%;
+  width: 100%;
+}

@@ -18,22 +18,22 @@ class App extends Component {
           <Drawer open>
             <AppBar title="User Account" showMenuIconButton={false} />
             <MenuItem>
-              <Link to="/">
+              <Link className="sidebar__item" to="/">
                 User profile
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link to="/address">
+              <Link className="sidebar__item" to="/address">
                 Address list
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link to="/order">
+              <Link className="sidebar__item" to="/order">
                 Order history
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link to="/wishlist">
+              <Link className="sidebar__item" to="/wishlist">
                 Wishlist
               </Link>
             </MenuItem>
