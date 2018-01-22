@@ -16,3 +16,7 @@
 You should run only one command after cloning this repo:
 
 ```$ npm start```
+
+### Tests
+
+```$ npm test```
