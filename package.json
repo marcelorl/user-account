@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/marcelorl/user-account#readme",
   "dependencies": {
-    "concurrently": "^3.5.1",
+    "concurrently": "^4.1.0",
     "react-router-redux": "^5.0.0-alpha.9"
   }
 }
