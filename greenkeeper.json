@@ -1,0 +1,25 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "api/package.json",
+        "client/package.json",
+        "client/src/components/pages/Address/package.json",
+        "client/src/components/pages/App/package.json",
+        "client/src/components/pages/Home/package.json",
+        "client/src/components/pages/Order/package.json",
+        "client/src/components/pages/Wishlist/package.json",
+        "client/src/components/templates/Address/package.json",
+        "client/src/components/templates/App/package.json",
+        "client/src/components/templates/Home/package.json",
+        "client/src/components/templates/Order/package.json",
+        "client/src/components/templates/Wishlist/package.json",
+        "client/src/reducers/package.json",
+        "client/src/services/ConfigureMockStore/package.json",
+        "client/src/services/History/package.json",
+        "client/src/services/Request/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
